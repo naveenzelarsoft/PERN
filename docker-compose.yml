@@ -10,8 +10,8 @@ services:
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
   backend:
-#        build: ./backend
-        image: naveen5035/backend:v9
+        build: ./backend
+#        image: naveen5035/backend:v9
         container_name: backend
         environment:
          DATABASE: loizenaidb
