@@ -14,7 +14,7 @@ services:
 #        build: ./backend
         image: naveen5035/backend:v9
         container_name: backend
-        depends_on: -postgres
+        depends_on: - "postgres"
         environment:
          DATABASE: loizenaidb
          USERNAME: postgres
