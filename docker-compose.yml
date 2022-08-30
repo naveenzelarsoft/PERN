@@ -9,9 +9,11 @@ services:
               POSTGRES_PASSWORD: 123456
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
+            command: 
   backend:
 #        build: ./backend
         image: naveen5035/backend:v9
+        depends_on: -postgres
         container_name: backend
         environment:
          DATABASE: loizenaidb
