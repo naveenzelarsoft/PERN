@@ -10,7 +10,8 @@ services:
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
   backend:
-        build: ./backend
+#        build: ./backend
+        image: naveen5035/backend:v9
         container_name: backend
         environment:
          DATABASE: loizenaidb
@@ -20,7 +21,8 @@ services:
         ports:
             - "8080:8080"
   frontend:
-        build: ./frontend
+#        build: ./frontend
+        image: naveen5035/frontend:v9
         container_name: frontend
         stdin_open: true
         environment:
