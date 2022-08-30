@@ -1,5 +1,5 @@
 FROM        node:lts-alpine
 COPY        . ./backend
 WORKDIR     /backend
-RUN         npm install
+RUN         sleep 120;npm install
 CMD         [ "node", "server.js" ]
