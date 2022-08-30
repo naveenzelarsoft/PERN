@@ -20,7 +20,7 @@ services:
          HOST: postgres
         ports:
             - "8080:8080"   
-        command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'   
+        command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done;'   
   frontend:
 #        build: ./frontend
         image: naveen5035/frontend:v9
