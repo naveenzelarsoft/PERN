@@ -12,15 +12,15 @@ services:
   backend:
 #        build: ./backend
         image: naveen5035/backend:v9
-        container_name: backend
-        command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
+        container_name: backend        
         environment:
          DATABASE: loizenaidb
          USERNAME: postgres
          PASSWORD: 123456
          HOST: postgres
         ports:
-            - "8080:8080"      
+            - "8080:8080"   
+        command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'   
   frontend:
 #        build: ./frontend
         image: naveen5035/frontend:v9
