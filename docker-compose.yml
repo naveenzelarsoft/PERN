@@ -6,8 +6,8 @@ services:
             ports:
                 - "5432:5432"
             environment:
-              POSTGRES_PASSWORD: 123456
               POSTGRES_USER: postgres
+              POSTGRES_PASSWORD: 123456
               POSTGRES_DB: loizenaidb
   backend:
 #        build: ./backend
@@ -16,10 +16,10 @@ services:
         depends_on: 
               - postgres
         environment:
-         DATABASE: loizenaidb
          USERNAME: postgres
          PASSWORD: 123456
          HOST: postgres
+         DATABASE: loizenaidb
         ports:
             - "8080:8080"
   frontend:
