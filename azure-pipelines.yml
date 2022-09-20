@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '27d9a5d1-ed8e-4808-a509-fc15ae85f8ea'
   imageRepository: 'naveenzelarsoftpern'
   containerRegistry: 'samplepern.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/backend/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/frontend/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
